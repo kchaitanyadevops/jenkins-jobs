@@ -1,0 +1,11 @@
+commit bdf04bf8b80dfe825d6e92b5971304bd3fde5480
+tree 7f3e8de65a8ef316c83c8de76c909e86ac7e762a
+parent 66b8e4529ca11430abf4d2e42adb5765b82239c2
+author chandu <chandu@student.com> 2018-09-06 01:24:55 +0000
+committer chandu <chandu@student.com> 2018-09-06 01:24:55 +0000
+
+    Fix on facts
+
+
+
+:100644 100644 774e467b43c68babd0c3ddaba46d78fe85bef5cb 6b920e0f0c4f7a37f4dc3ba06bcbebbd7a2d5652 M	playbooks/local_facts_init.yml

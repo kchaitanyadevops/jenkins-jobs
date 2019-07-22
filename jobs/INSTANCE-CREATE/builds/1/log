@@ -1,0 +1,35 @@
+Started by user [8mha:////4G8wlr3TGa2g5Ng2rPjdYnZh3OiTTghXquCE7NEO3qwZAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0mAdmin
+Building in workspace /var/lib/jenkins/workspace/INSTANCE-CREATE
+[INSTANCE-CREATE] $ /bin/sh -xe /tmp/jenkins5902396963826095093.sh
++ env
+HUDSON_SERVER_COOKIE=566b5c4aefbd3259
+SHELL=/bin/bash
+BUILD_TAG=jenkins-INSTANCE-CREATE-1
+WORKSPACE=/var/lib/jenkins/workspace/INSTANCE-CREATE
+RUN_CHANGES_DISPLAY_URL=http://unconfigured-jenkins-location/job/INSTANCE-CREATE/1/display/redirect?page=changes
+USER=jenkins
+JENKINS_HOME=/var/lib/jenkins
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+RUN_DISPLAY_URL=http://unconfigured-jenkins-location/job/INSTANCE-CREATE/1/display/redirect
+_=/bin/env
+PROJECT_NAME=student
+PWD=/var/lib/jenkins/workspace/INSTANCE-CREATE
+LANG=en_US.UTF-8
+JOB_NAME=INSTANCE-CREATE
+BUILD_DISPLAY_NAME=#1
+BUILD_ID=1
+JOB_BASE_NAME=INSTANCE-CREATE
+ENVIRONMENT=dev
+SHLVL=3
+HOME=/var/lib/jenkins
+SERVER_NAME=abc
+EXECUTOR_NUMBER=1
+JENKINS_SERVER_COOKIE=566b5c4aefbd3259
+NODE_LABELS=master
+LOGNAME=jenkins
+HUDSON_HOME=/var/lib/jenkins
+NODE_NAME=master
+JOB_DISPLAY_URL=http://unconfigured-jenkins-location/job/INSTANCE-CREATE/display/redirect
+BUILD_NUMBER=1
+HUDSON_COOKIE=d1632bd5-935d-4fbe-995b-59ef260448db
+Finished: SUCCESS

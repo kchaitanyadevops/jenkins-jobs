@@ -1,0 +1,31 @@
+Started by user [8mha:////4G8wlr3TGa2g5Ng2rPjdYnZh3OiTTghXquCE7NEO3qwZAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0mAdmin
+Building in workspace /var/lib/jenkins/workspace/INSTANCE-CREATE
+Cloning the remote Git repository
+Cloning repository http://104.196.127.109/engineers/ansible.git
+ > git init /var/lib/jenkins/workspace/INSTANCE-CREATE # timeout=10
+Fetching upstream changes from http://104.196.127.109/engineers/ansible.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials gitrouser
+ > git fetch --tags --progress http://104.196.127.109/engineers/ansible.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url http://104.196.127.109/engineers/ansible.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url http://104.196.127.109/engineers/ansible.git # timeout=10
+Fetching upstream changes from http://104.196.127.109/engineers/ansible.git
+using GIT_ASKPASS to set credentials gitrouser
+ > git fetch --tags --progress http://104.196.127.109/engineers/ansible.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 00041abfb5af02036604f6b7801b3fb6abceab7a (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 00041abfb5af02036604f6b7801b3fb6abceab7a
+Commit message: "Created local facts playbook"
+First time build. Skipping changelog.
+[INSTANCE-CREATE] $ /bin/sh -xe /tmp/jenkins3355482782378966493.sh
++ ls
+ansible.cfg
+playbooks
+README.md
+roles
+sample.yml
++ exit
+Finished: SUCCESS

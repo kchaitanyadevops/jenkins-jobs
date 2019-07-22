@@ -1,0 +1,30 @@
+Started by user [8mha:////4G8wlr3TGa2g5Ng2rPjdYnZh3OiTTghXquCE7NEO3qwZAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0mAdmin
+Building in workspace /var/lib/jenkins/workspace/STACK_SETUP
+Cloning the remote Git repository
+Cloning repository http://104.196.127.109/engineers/ansible.git
+ > git init /var/lib/jenkins/workspace/STACK_SETUP # timeout=10
+Fetching upstream changes from http://104.196.127.109/engineers/ansible.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials gitrouser
+ > git fetch --tags --progress http://104.196.127.109/engineers/ansible.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url http://104.196.127.109/engineers/ansible.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url http://104.196.127.109/engineers/ansible.git # timeout=10
+Fetching upstream changes from http://104.196.127.109/engineers/ansible.git
+using GIT_ASKPASS to set credentials gitrouser
+ > git fetch --tags --progress http://104.196.127.109/engineers/ansible.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 095185bafa66d24cc2b04ecbf793837a8262e339 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 095185bafa66d24cc2b04ecbf793837a8262e339
+Commit message: "stack update"
+First time build. Skipping changelog.
+[STACK_SETUP] $ /bin/sh -xe /tmp/jenkins7020263343370984331.sh
++ gcloud compute instances list --filter=labels.proj=student
++ grep -v '^NAME'
++ awk '{print $1}'
++ -i hosts -u ec2-user playbooks/proj-setup.yml -e PROJECT_NAME= -e ENVIRONMENT=
+/tmp/jenkins7020263343370984331.sh: line 3: -i: command not found
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

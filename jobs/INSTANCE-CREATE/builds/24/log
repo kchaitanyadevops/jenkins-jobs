@@ -1,0 +1,43 @@
+Started by user [8mha:////4G8wlr3TGa2g5Ng2rPjdYnZh3OiTTghXquCE7NEO3qwZAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0mAdmin
+Building in workspace /var/lib/jenkins/workspace/INSTANCE-CREATE
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url http://104.196.127.109/engineers/ansible.git # timeout=10
+Fetching upstream changes from http://104.196.127.109/engineers/ansible.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials gitrouser
+ > git fetch --tags --progress http://104.196.127.109/engineers/ansible.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision ddf640a081f80b2794bac338d2efa1877f1f653b (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f ddf640a081f80b2794bac338d2efa1877f1f653b
+Commit message: "Stack Update"
+ > git rev-list --no-walk ddf640a081f80b2794bac338d2efa1877f1f653b # timeout=10
+[INSTANCE-CREATE] $ /bin/sh -xe /tmp/jenkins6730556745610726404.sh
++ '[' -z student -o -z prod -o stuprdapp01 == NULL ']'
++ '[' false == true ']'
++ gcloud compute instances create stuprdapp01 --zone=us-east1-b --metadata=environment=prod,proj=student --image=mycentos7 --boot-disk-size=10GB --labels=proj=student,environment=prod
+WARNING: You have selected a disk size of under [200GB]. This may result in poor I/O performance. For more information, see: https://developers.google.com/compute/docs/disks#performance.
+Created [https://www.googleapis.com/compute/v1/projects/geometric-ivy-194605/zones/us-east1-b/instances/stuprdapp01].
+NAME         ZONE        MACHINE_TYPE   PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP     STATUS
+stuprdapp01  us-east1-b  n1-standard-1               10.142.0.7   104.196.47.197  RUNNING
++ '[' 0 -eq 0 ']'
++ echo stuprdapp01
++ ansible-playbook -i hosts -u ec2-user playbooks/local_facts_init.yml -e PROJECT_NAME=student -e ENVIRONMENT=prod
+
+PLAY [Setup local facts on new nodes] ******************************************
+
+TASK [init : wait for ssh connection] ******************************************
+ok: [stuprdapp01]
+
+TASK [init : Create ansible local facts directory] *****************************
+changed: [stuprdapp01]
+
+TASK [init : Copy info fact] ***************************************************
+changed: [stuprdapp01]
+
+PLAY RECAP *********************************************************************
+stuprdapp01                : ok=3    changed=2    unreachable=0    failed=0   
+
+Finished: SUCCESS

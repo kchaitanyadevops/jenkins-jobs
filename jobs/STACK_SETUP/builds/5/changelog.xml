@@ -1,0 +1,11 @@
+commit 0a8f571b400f4cc5f4d81261563c561da63e60e9
+tree 02ddf63eaca29131e2f30b30b71303a0b6f27c74
+parent ddf640a081f80b2794bac338d2efa1877f1f653b
+author chandu <chandu@student.com> 2018-09-07 01:04:21 +0000
+committer chandu <chandu@student.com> 2018-09-07 01:04:21 +0000
+
+    Stack Update
+
+
+
+:100644 100644 54a6ec3e9a83ade962d3a6cf88be65058b47f5fa 146c7ae9db67b741e36eb4c846926e7cfe653131 M	roles/stack/tasks/main.yml

@@ -1,0 +1,41 @@
+Started by user [8mha:////4G8wlr3TGa2g5Ng2rPjdYnZh3OiTTghXquCE7NEO3qwZAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0mAdmin
+Building in workspace /var/lib/jenkins/workspace/INSTANCE-CREATE
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url http://104.196.127.109/engineers/ansible.git # timeout=10
+Fetching upstream changes from http://104.196.127.109/engineers/ansible.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials gitrouser
+ > git fetch --tags --progress http://104.196.127.109/engineers/ansible.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision bdf04bf8b80dfe825d6e92b5971304bd3fde5480 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f bdf04bf8b80dfe825d6e92b5971304bd3fde5480
+Commit message: "Fix on facts"
+ > git rev-list --no-walk 66b8e4529ca11430abf4d2e42adb5765b82239c2 # timeout=10
+[INSTANCE-CREATE] $ /bin/sh -xe /tmp/jenkins8333741263217944721.sh
++ '[' -z student -o -z dev -o studevapp02 == NULL ']'
++ '[' true == true ']'
++ gcloud compute instances delete studevapp02 --zone=us-east1-b -q
+Deleted [https://www.googleapis.com/compute/v1/projects/geometric-ivy-194605/zones/us-east1-b/instances/studevapp02].
++ gcloud compute instances create studevapp02 --zone=us-east1-b --metadata=environment=dev,proj=student --image=mycentos7 --boot-disk-size=10GB --labels=proj=student,environment=dev
+WARNING: You have selected a disk size of under [200GB]. This may result in poor I/O performance. For more information, see: https://developers.google.com/compute/docs/disks#performance.
+Created [https://www.googleapis.com/compute/v1/projects/geometric-ivy-194605/zones/us-east1-b/instances/studevapp02].
+NAME         ZONE        MACHINE_TYPE   PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP   STATUS
+studevapp02  us-east1-b  n1-standard-1               10.142.0.2   35.196.7.238  RUNNING
++ '[' 0 -eq 0 ']'
++ echo studevapp02
++ ansible-playbook -i hosts -u ec2-user playbooks/local_facts_init.yml -e PROJECT_NAME=student -e ENVIRONMENT=dev
+
+PLAY [Setup local facts on new nodes] ******************************************
+
+TASK [init : wait for ssh connection] ******************************************
+fatal: [studevapp02]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host studevapp02 port 22: Connection timed out\r\n", "unreachable": true}
+	to retry, use: --limit @/var/lib/jenkins/workspace/INSTANCE-CREATE/playbooks/local_facts_init.retry
+
+PLAY RECAP *********************************************************************
+studevapp02                : ok=0    changed=0    unreachable=1    failed=0   
+
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

@@ -1,0 +1,12 @@
+commit db232a9379586cd5badf713a01aa5fb7940a3df5
+tree 0bd61f848016ef8e0e2a403d98594ae8f206b08e
+parent b7b495d0bf34ff910da3b177ec7cc41cf2f299e2
+author chandu <chandu@student.com> 2018-09-07 01:23:39 +0000
+committer chandu <chandu@student.com> 2018-09-07 01:23:39 +0000
+
+    Stack Update
+
+
+
+:000000 100644 0000000000000000000000000000000000000000 9771407b7cb46431d841a5662c33fdf9301eac12 A	roles/stack/files/mod_jk.so
+:100644 100644 d11cc431d4a6306762a3e5edfc4dda2303480d78 ceacf24590139ebc1c6985e7b8afbd4d9f5575ad M	roles/stack/tasks/web.yml

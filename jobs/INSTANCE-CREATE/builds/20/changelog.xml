@@ -1,0 +1,11 @@
+commit 146d190a541582423edc2a6e03cc9173e11c7fe4
+tree 8acfc764a3d8f27b9e5b737519892d00871c572f
+parent bdf04bf8b80dfe825d6e92b5971304bd3fde5480
+author chandu <chandu@student.com> 2018-09-06 01:28:27 +0000
+committer chandu <chandu@student.com> 2018-09-06 01:28:27 +0000
+
+    Fix on ssh connections
+
+
+
+:100644 100644 5c734dd6ce3196b13ffe5737ecfa58253c2cb587 f4140926f23c88f7270dbaca854c683aaaba8de3 M	roles/init/tasks/main.yml

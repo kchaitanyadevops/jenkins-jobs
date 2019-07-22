@@ -1,0 +1,43 @@
+Started by user [8mha:////4G8wlr3TGa2g5Ng2rPjdYnZh3OiTTghXquCE7NEO3qwZAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0mAdmin
+Building in workspace /var/lib/jenkins/workspace/INSTANCE-CREATE
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url http://104.196.127.109/engineers/ansible.git # timeout=10
+Fetching upstream changes from http://104.196.127.109/engineers/ansible.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials gitrouser
+ > git fetch --tags --progress http://104.196.127.109/engineers/ansible.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 146d190a541582423edc2a6e03cc9173e11c7fe4 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 146d190a541582423edc2a6e03cc9173e11c7fe4
+Commit message: "Fix on ssh connections"
+ > git rev-list --no-walk 146d190a541582423edc2a6e03cc9173e11c7fe4 # timeout=10
+[INSTANCE-CREATE] $ /bin/sh -xe /tmp/jenkins3246216908337295215.sh
++ '[' -z student -o -z dev -o studevnode01 == NULL ']'
++ '[' false == true ']'
++ gcloud compute instances create studevnode01 --zone=us-east1-b --metadata=environment=dev,proj=student --image=mycentos7 --boot-disk-size=10GB --labels=proj=student,environment=dev
+WARNING: You have selected a disk size of under [200GB]. This may result in poor I/O performance. For more information, see: https://developers.google.com/compute/docs/disks#performance.
+Created [https://www.googleapis.com/compute/v1/projects/geometric-ivy-194605/zones/us-east1-b/instances/studevnode01].
+NAME          ZONE        MACHINE_TYPE   PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP    STATUS
+studevnode01  us-east1-b  n1-standard-1               10.142.0.2   35.237.247.65  RUNNING
++ '[' 0 -eq 0 ']'
++ echo studevnode01
++ ansible-playbook -i hosts -u ec2-user playbooks/local_facts_init.yml -e PROJECT_NAME=student -e ENVIRONMENT=dev
+
+PLAY [Setup local facts on new nodes] ******************************************
+
+TASK [init : wait for ssh connection] ******************************************
+ok: [studevnode01]
+
+TASK [init : Create ansible local facts directory] *****************************
+changed: [studevnode01]
+
+TASK [init : Copy info fact] ***************************************************
+changed: [studevnode01]
+
+PLAY RECAP *********************************************************************
+studevnode01               : ok=3    changed=2    unreachable=0    failed=0   
+
+Finished: SUCCESS

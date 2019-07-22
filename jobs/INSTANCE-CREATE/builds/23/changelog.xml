@@ -1,0 +1,35 @@
+commit ddf640a081f80b2794bac338d2efa1877f1f653b
+tree 1c632362ac9902170280afdb21b31cc90587a5fd
+parent 065ed1da1d445545d1090c0e4d6e799d0c934afa
+author chandu <chandu@student.com> 2018-09-07 00:58:57 +0000
+committer chandu <chandu@student.com> 2018-09-07 00:58:57 +0000
+
+    Stack Update
+
+
+
+:100644 100644 7d0f90abf1456cbd183d758f4cccf1efffadd4f9 54a6ec3e9a83ade962d3a6cf88be65058b47f5fa M	roles/stack/tasks/main.yml
+commit 065ed1da1d445545d1090c0e4d6e799d0c934afa
+tree d02341c0fe07501d8857ce38f91f728944a83cf6
+parent 095185bafa66d24cc2b04ecbf793837a8262e339
+author chandu <chandu@student.com> 2018-09-07 00:58:15 +0000
+committer chandu <chandu@student.com> 2018-09-07 00:58:15 +0000
+
+    Stack Update
+
+
+
+:100644 100644 3576768a9f6ffb60333bd0354975059589de2eee 7d0f90abf1456cbd183d758f4cccf1efffadd4f9 M	roles/stack/tasks/main.yml
+:000000 100644 0000000000000000000000000000000000000000 f13368a29a891f4ea488c11606ca9bcfc59a0d27 A	roles/stack/tasks/sample.yml
+commit 095185bafa66d24cc2b04ecbf793837a8262e339
+tree 7099baa53c6d4a5f70c981b38b174cca82273653
+parent 146d190a541582423edc2a6e03cc9173e11c7fe4
+author chandu <chandu@student.com> 2018-09-07 00:47:15 +0000
+committer chandu <chandu@student.com> 2018-09-07 00:47:15 +0000
+
+    stack update
+
+
+
+:000000 100644 0000000000000000000000000000000000000000 1477d149448d3471fd5d7b99790efe8708f6d8d6 A	playbooks/proj-setup.yml
+:000000 100644 0000000000000000000000000000000000000000 3576768a9f6ffb60333bd0354975059589de2eee A	roles/stack/tasks/main.yml

@@ -1,0 +1,9 @@
+Started by user [8mha:////4G8wlr3TGa2g5Ng2rPjdYnZh3OiTTghXquCE7NEO3qwZAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0mAdmin
+Building in workspace /var/lib/jenkins/workspace/INSTANCE-CREATE
+[INSTANCE-CREATE] $ /bin/sh -xe /tmp/jenkins2499874228998395601.sh
++ '[' -z student -o -z '' -o NULL == NULL ']'
++ echo 'Invalid Inputs'
+Invalid Inputs
++ exit 1
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

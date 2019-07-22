@@ -1,0 +1,38 @@
+Started by user [8mha:////4G8wlr3TGa2g5Ng2rPjdYnZh3OiTTghXquCE7NEO3qwZAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0mAdmin
+Building in workspace /var/lib/jenkins/workspace/INSTANCE-CREATE
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url http://104.196.127.109/engineers/ansible.git # timeout=10
+Fetching upstream changes from http://104.196.127.109/engineers/ansible.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials gitrouser
+ > git fetch --tags --progress http://104.196.127.109/engineers/ansible.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 00041abfb5af02036604f6b7801b3fb6abceab7a (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 00041abfb5af02036604f6b7801b3fb6abceab7a
+Commit message: "Created local facts playbook"
+ > git rev-list --no-walk 00041abfb5af02036604f6b7801b3fb6abceab7a # timeout=10
+[INSTANCE-CREATE] $ /bin/sh -xe /tmp/jenkins8096771260822840784.sh
++ '[' -z student -o -z dev -o studevapp02 == NULL ']'
++ '[' true == true ']'
++ gcloud compute instances delete studevapp02 --zone=us-east1-b -q
+Deleted [https://www.googleapis.com/compute/v1/projects/geometric-ivy-194605/zones/us-east1-b/instances/studevapp02].
++ gcloud compute instances create studevapp02 --zone=us-east1-b --metadata=environment=dev,proj=student --image=mycentos7 --boot-disk-size=10GB --labels=proj=student,environment=dev
+WARNING: You have selected a disk size of under [200GB]. This may result in poor I/O performance. For more information, see: https://developers.google.com/compute/docs/disks#performance.
+Created [https://www.googleapis.com/compute/v1/projects/geometric-ivy-194605/zones/us-east1-b/instances/studevapp02].
+NAME         ZONE        MACHINE_TYPE   PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP   STATUS
+studevapp02  us-east1-b  n1-standard-1               10.142.0.2   35.196.7.238  RUNNING
++ '[' 0 -eq 0 ']'
++ echo studevapp02
++ ansible-playbook -u ec2-user playbooks/local_facts_init.yml -e PROJECT=student -e ENVIRONMENT=dev
+ [WARNING]: provided hosts list is empty, only localhost is available. Note
+that the implicit localhost does not match 'all'
+
+PLAY [Setup local facts on new nodes] ******************************************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+Finished: SUCCESS

@@ -1,0 +1,65 @@
+Started by user [8mha:////4G8wlr3TGa2g5Ng2rPjdYnZh3OiTTghXquCE7NEO3qwZAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0mAdmin
+Building in workspace /var/lib/jenkins/workspace/STACK_SETUP
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url http://104.196.127.109/engineers/ansible.git # timeout=10
+Fetching upstream changes from http://104.196.127.109/engineers/ansible.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials gitrouser
+ > git fetch --tags --progress http://104.196.127.109/engineers/ansible.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 0a8f571b400f4cc5f4d81261563c561da63e60e9 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 0a8f571b400f4cc5f4d81261563c561da63e60e9
+Commit message: "Stack Update"
+ > git rev-list --no-walk ddf640a081f80b2794bac338d2efa1877f1f653b # timeout=10
+[STACK_SETUP] $ /bin/sh -xe /tmp/jenkins5859645062221991356.sh
++ gcloud compute instances list --filter=labels.proj=student
++ grep -v '^NAME'
++ awk '{print $1}'
++ ansible-playbook -i hosts -u ec2-user playbooks/proj-setup.yml
+
+PLAY [Setup Student Project Components] ****************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [studevnode01]
+ok: [studevnode02]
+ok: [stustgapp01]
+ok: [stuprdapp01]
+
+TASK [stack : Sample] **********************************************************
+ok: [studevnode01] => {
+    "msg": "Hello"
+}
+ok: [studevnode02] => {
+    "msg": "Hello"
+}
+ok: [stuprdapp01] => {
+    "msg": "Hello"
+}
+ok: [stustgapp01] => {
+    "msg": "Hello"
+}
+
+TASK [stack : Gather a environment] ********************************************
+ok: [studevnode01] => {
+    "msg": "dev"
+}
+ok: [studevnode02] => {
+    "msg": "dev"
+}
+ok: [stuprdapp01] => {
+    "msg": "prod"
+}
+ok: [stustgapp01] => {
+    "msg": "stage"
+}
+
+PLAY RECAP *********************************************************************
+studevnode01               : ok=3    changed=0    unreachable=0    failed=0   
+studevnode02               : ok=3    changed=0    unreachable=0    failed=0   
+stuprdapp01                : ok=3    changed=0    unreachable=0    failed=0   
+stustgapp01                : ok=3    changed=0    unreachable=0    failed=0   
+
+Finished: SUCCESS
